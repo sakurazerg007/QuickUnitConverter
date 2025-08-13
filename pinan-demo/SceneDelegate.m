@@ -6,6 +6,7 @@
 //
 
 #import "SceneDelegate.h"
+#import "MainViewController.h"
 
 @interface SceneDelegate ()
 
@@ -18,6 +19,36 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    if ([scene isKindOfClass:[UIWindowScene class]]) {
+        UIWindowScene *windowScene = (UIWindowScene *)scene;
+        
+        self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+        
+        // 创建主视图控制器
+        MainViewController *mainViewController = [[MainViewController alloc] init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+        
+        // 设置导航栏样式
+        if (@available(iOS 13.0, *)) {
+            UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+            [appearance configureWithOpaqueBackground];
+            appearance.backgroundColor = [UIColor systemBackgroundColor];
+            appearance.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor labelColor]};
+            
+            navigationController.navigationBar.standardAppearance = appearance;
+            navigationController.navigationBar.scrollEdgeAppearance = appearance;
+        } else {
+            // iOS 12 fallback
+            navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+            navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor blackColor]};
+        }
+        
+        navigationController.navigationBar.prefersLargeTitles = YES;
+        
+        self.window.rootViewController = navigationController;
+        [self.window makeKeyAndVisible];
+    }
 }
 
 
