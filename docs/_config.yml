@@ -4,8 +4,8 @@
 # 站点基本信息
 title: "QuickUnitConverter - 快速单位转换器"
 description: "专业的iOS单位转换工具 - 隐私政策和相关文档"
-url: "https://[username].github.io"
-baseurl: "/[repository-name]"
+url: "https://sakurazerg007.github.io"
+baseurl: "/QuickUnitConverter"
 
 # 主题设置
 theme: minima

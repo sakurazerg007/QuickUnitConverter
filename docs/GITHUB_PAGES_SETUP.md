@@ -30,7 +30,7 @@ git add .
 git commit -m "Add privacy policy and GitHub Pages setup"
 
 # 添加远程仓库（替换为您的仓库URL）
-git remote add origin https://github.com/[username]/[repository-name].git
+git remote add origin https://github.com/sakurazerg007/QuickUnitConverter.git
 
 # 推送到GitHub
 git push -u origin main
@@ -51,7 +51,7 @@ git push -u origin main
 
 - GitHub Pages通常需要几分钟时间完成部署
 - 部署完成后，您会在Pages设置页面看到绿色的成功提示
-- 访问链接格式：`https://[username].github.io/[repository-name]/`
+- 访问链接格式：`https://sakurazerg007.github.io/QuickUnitConverter/`
 
 ## 🔗 访问链接
 
@@ -59,9 +59,9 @@ git push -u origin main
 
 ### 主要链接
 
-- **主页：** `https://[username].github.io/[repository-name]/`
-- **隐私政策 (HTML)：** `https://[username].github.io/[repository-name]/privacy-policy.html`
-- **隐私政策 (Markdown)：** `https://[username].github.io/[repository-name]/privacy-policy.md`
+- **主页：** `https://sakurazerg007.github.io/QuickUnitConverter/`
+- **隐私政策 (HTML)：** `https://sakurazerg007.github.io/QuickUnitConverter/privacy-policy.html`
+- **隐私政策 (Markdown)：** `https://sakurazerg007.github.io/QuickUnitConverter/privacy-policy.md`
 
 ### 示例链接
 
@@ -78,8 +78,8 @@ git push -u origin main
 
 ```yaml
 # 更新这些字段
-url: "https://[您的用户名].github.io"
-baseurl: "/[您的仓库名]"
+url: "https://sakurazerg007.github.io"
+baseurl: "/QuickUnitConverter"
 
 # 示例
 url: "https://johndoe.github.io"
@@ -92,7 +92,7 @@ baseurl: "/quickunitconverter"
 
 ```html
 <p><strong>GitHub Pages URL：</strong></p>
-<p><code>https://[您的用户名].github.io/[您的仓库名]/</code></p>
+<p><code>https://sakurazerg007.github.io/QuickUnitConverter/</code></p>
 ```
 
 ## 🔧 故障排除
@@ -134,7 +134,7 @@ baseurl: "/quickunitconverter"
 在App Store Connect中提交应用时，使用以下URL作为隐私政策链接：
 
 ```
-https://[您的用户名].github.io/[您的仓库名]/privacy-policy.html
+https://sakurazerg007.github.io/QuickUnitConverter/privacy-policy.html
 ```
 
 ### Apple审核要求

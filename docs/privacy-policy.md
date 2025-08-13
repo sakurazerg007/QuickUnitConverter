@@ -188,10 +188,8 @@ QuickUnitConverter适合所有年龄段用户使用：
 
 本隐私政策托管在GitHub Pages上，可通过以下方式访问：
 
-- **HTML版本：** `https://[username].github.io/[repository]/privacy-policy.html`
-- **Markdown版本：** `https://[username].github.io/[repository]/privacy-policy.md`
-
-> 请将上述链接中的 `[username]` 和 `[repository]` 替换为实际的GitHub用户名和仓库名。
+- **HTML版本：** `https://sakurazerg007.github.io/QuickUnitConverter/privacy-policy.html`
+- **Markdown版本：** `https://sakurazerg007.github.io/QuickUnitConverter/privacy-policy.md`
 
 ### 部署到GitHub Pages的步骤
 
