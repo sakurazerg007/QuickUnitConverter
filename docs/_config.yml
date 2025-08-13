@@ -1,0 +1,76 @@
+# GitHub Pages Configuration for QuickUnitConverter
+# 配置文件用于GitHub Pages托管
+
+# 站点基本信息
+title: "QuickUnitConverter - 快速单位转换器"
+description: "专业的iOS单位转换工具 - 隐私政策和相关文档"
+url: "https://[username].github.io"
+baseurl: "/[repository-name]"
+
+# 主题设置
+theme: minima
+
+# Markdown处理器
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .DS_Store
+  - README.md
+  - LICENSE
+  - pinan-demo.xcodeproj/
+  - pinan-demo/
+  - Libraries/
+  - ScreenShot/
+  - .gitignore
+
+# 包含文件
+include:
+  - privacy-policy.html
+  - privacy-policy.md
+
+# 默认布局
+defaults:
+  - scope:
+      path: "privacy-policy.html"
+    values:
+      layout: default
+      title: "隐私政策"
+  - scope:
+      path: "privacy-policy.md"
+    values:
+      layout: default
+      title: "隐私政策 (Markdown)"
+
+# 站点设置
+lang: zh-CN
+timezone: Asia/Shanghai
+
+# SEO设置
+author:
+  name: "QuickUnitConverter Team"
+  email: "support@quickunitconverter.com"
+
+social:
+  name: QuickUnitConverter
+  links:
+    - https://apps.apple.com/app/quickunitconverter
+
+# 版权信息
+copyright: "© 2024 QuickUnitConverter. 保留所有权利。"
