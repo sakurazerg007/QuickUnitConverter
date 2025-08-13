@@ -151,4 +151,5 @@ local.properties
 config.local.*
 
 #
+.trae/
 Libraries/libPAFaceDetectSDK.a
