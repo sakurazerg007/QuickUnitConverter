@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6319D92E4D78B00091DF94 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6319D82E4D78B00091DF94 /* CoreMedia.framework */; };
+		8F6319DB2E4D793A0091DF94 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6319DA2E4D793A0091DF94 /* CoreMotion.framework */; };
+		8F6319DD2E4D79E30091DF94 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6319DC2E4D79D60091DF94 /* libc++.tbd */; };
+		8F6319DF2E4D7A730091DF94 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6319DE2E4D7A730091DF94 /* Accelerate.framework */; };
 		8FF797452E4AE5EE00542679 /* libPAFaceDetectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF797432E4AE5EE00542679 /* libPAFaceDetectSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8F5F371C2E4ADC5A00CF34AB /* pinan-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pinan-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F6319D82E4D78B00091DF94 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		8F6319DA2E4D793A0091DF94 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8F6319DC2E4D79D60091DF94 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8F6319DE2E4D7A730091DF94 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		8FF797432E4AE5EE00542679 /* libPAFaceDetectSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPAFaceDetectSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6319D92E4D78B00091DF94 /* CoreMedia.framework in Frameworks */,
+				8F6319DB2E4D793A0091DF94 /* CoreMotion.framework in Frameworks */,
+				8F6319DF2E4D7A730091DF94 /* Accelerate.framework in Frameworks */,
+				8F6319DD2E4D79E30091DF94 /* libc++.tbd in Frameworks */,
 				8FF797452E4AE5EE00542679 /* libPAFaceDetectSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +66,7 @@
 				8F5F371E2E4ADC5A00CF34AB /* pinan-demo */,
 				8F5F371D2E4ADC5A00CF34AB /* Products */,
 				8FF797442E4AE5EE00542679 /* Libraries */,
+				8F6319D72E4D78B00091DF94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +76,17 @@
 				8F5F371C2E4ADC5A00CF34AB /* pinan-demo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8F6319D72E4D78B00091DF94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F6319DE2E4D7A730091DF94 /* Accelerate.framework */,
+				8F6319DC2E4D79D60091DF94 /* libc++.tbd */,
+				8F6319DA2E4D793A0091DF94 /* CoreMotion.framework */,
+				8F6319D82E4D78B00091DF94 /* CoreMedia.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8FF797442E4AE5EE00542679 /* Libraries */ = {
@@ -161,6 +185,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 332RQK9AVJ;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -180,11 +205,15 @@
 					"$(PROJECT_DIR)/Libraries",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/Libraries/libPAFaceDetectSDK.a",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nagain.pinan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MacDevProfile;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/include";
@@ -200,6 +229,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 332RQK9AVJ;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -219,11 +249,15 @@
 					"$(PROJECT_DIR)/Libraries",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/Libraries/libPAFaceDetectSDK.a",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nagain.upload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = upload;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/include";
